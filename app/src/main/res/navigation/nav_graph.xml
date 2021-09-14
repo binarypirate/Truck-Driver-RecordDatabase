@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.truckdriverdatarecorder.views.fragments.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+
+        <action
+            android:id="@+id/action_splashFragment_to_logInFragment"
+            app:destination="@id/logInFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_splashFragment_to_dashBoardFragment"
+            app:destination="@id/dashBoardFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.truckdriverdatarecorder.views.fragments.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_registerFragment_to_logInFragment"
+            app:destination="@id/logInFragment"
+            app:popUpTo="@id/registerFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/logInFragment"
+        android:name="com.example.truckdriverdatarecorder.views.fragments.LogInFragment"
+        android:label="fragment_log_in"
+        tools:layout="@layout/fragment_log_in" >
+
+        <action
+            android:id="@+id/action_logInFragment_to_dashBoardFragment"
+            app:destination="@id/dashBoardFragment"
+            app:popUpTo="@id/logInFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_logInFragment_to_registerFragment"
+            app:destination="@id/registerFragment"
+            app:popUpTo="@id/logInFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/dashBoardFragment"
+        android:name="com.example.truckdriverdatarecorder.views.fragments.DashBoardFragment"
+        android:label="fragment_dash_board"
+        tools:layout="@layout/fragment_dash_board" >
+
+        <action
+            android:id="@+id/action_dashBoardFragment_to_createNewRecordFragment"
+            app:destination="@id/createNewRecordFragment"
+            app:popUpTo="@id/dashBoardFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_dashBoardFragment_to_showAllRecordFragment"
+            app:destination="@id/showAllRecordFragment"
+            app:popUpTo="@id/dashBoardFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_dashBoardFragment_to_aboutFragment"
+            app:destination="@id/aboutFragment"
+            app:popUpTo="@id/dashBoardFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/createNewRecordFragment"
+        android:name="com.example.truckdriverdatarecorder.views.fragments.CreateNewRecordFragment"
+        android:label="fragment_create_new_record"
+        tools:layout="@layout/fragment_create_new_record" >
+
+        <action
+            android:id="@+id/action_createNewRecordFragment_to_dashBoardFragment"
+            app:destination="@id/dashBoardFragment"
+            app:popUpTo="@id/createNewRecordFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/showAllRecordFragment"
+        android:name="com.example.truckdriverdatarecorder.views.fragments.ShowAllRecordFragment"
+        android:label="fragment_show_all_record"
+        tools:layout="@layout/fragment_show_all_record" >
+        <action
+            android:id="@+id/action_showAllRecordFragment_to_dashBoardFragment"
+            app:destination="@id/dashBoardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.example.truckdriverdatarecorder.views.fragments.AboutFragment"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" />
+
+</navigation>

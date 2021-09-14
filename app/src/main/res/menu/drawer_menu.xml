@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group
+        android:id="@+id/group1"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/createRecord"
+            android:icon="@drawable/car"
+            android:title="Create record" />
+    </group>
+    <group
+        android:id="@+id/group2"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/showAll"
+            android:icon="@drawable/history"
+            android:title="Show all" />
+        <item
+            android:id="@+id/about"
+            android:icon="@drawable/info"
+            android:title="About" />
+    </group>
+</menu>
